@@ -1,8 +1,13 @@
 import './App.css';
 
+import logo from './assets/logo.svg'
+// como a logo é uma variável, ela é usada entre chaves
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div className="container">
+      <img src={logo} alt="Airbnb"></img>
+    </div>
   );
 }
 
