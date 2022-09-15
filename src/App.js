@@ -1,4 +1,5 @@
 import './App.css';
+import api from './services/api'
 
 import logo from './assets/logo.svg'
 // como a logo é uma variável, ela é usada entre chaves
