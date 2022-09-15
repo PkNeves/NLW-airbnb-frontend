@@ -9,9 +9,14 @@ function App() {
   // o useState serve para criar variaveis de estado dentro do React
   // por padrao temos 2 variaveis, a primeira é a variável em sí e a segunda é uma função para alterar o valor da variavel
   const [ email, setEmail ] = useState('')
-  function handleSubmit(event) {
+  
+  async function handleSubmit(event) {
     event.preventDefault() 
-    console.log(email)
+
+    const response = await api.post('/sessions', { email })
+
+    const { _id } = response.data
+    console.log(_id)
   }
 
   return (
