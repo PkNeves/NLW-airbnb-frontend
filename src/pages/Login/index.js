@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import api from '../../services/api'
 
 
-export default function Login() {
+export default function Login({ history }) {
   // o useState serve para criar variaveis de estado dentro do React
   // por padrao temos 2 variaveis, a primeira é a variável em sí e a segunda é uma função para alterar o valor da variavel
   const [ email, setEmail ] = useState('')
@@ -15,6 +15,8 @@ export default function Login() {
     const { _id } = response.data
 
     localStorage.setItem('user', _id)
+
+    history.push('/dashboard')
   }
 
   return (
