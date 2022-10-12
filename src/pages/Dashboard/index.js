@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import api from '../../services/api'
 
 import './styles.css'
@@ -26,8 +27,10 @@ export default function Dashboard() {
             <span>{spot.price ? `R$${spot.price}/dia` : `GRATUITO`}</span>
           </li>
         ))}
-
       </ul>
+      <Link to="/new">
+        <button className='btn'>Cadastrar novo spot</button>
+      </Link>
     </>
   )
 }
