@@ -6,9 +6,9 @@ import './styles.css'
 
 export default function New({ history }) {
   const [thumbnail, setThumbnail] = useState(null)
-  const [company, setCompany] = useState()
-  const [techs, setTechs] = useState()
-  const [price, setPrice] = useState()
+  const [company, setCompany] = useState('')
+  const [techs, setTechs] = useState('')
+  const [price, setPrice] = useState('')
 
   const preview = useMemo(() => {
     return thumbnail ? URL.createObjectURL(thumbnail) : null
