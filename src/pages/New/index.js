@@ -62,7 +62,7 @@ export default function New({ history }) {
       <label htmlFor='price'>VALOR DA DIÁRIA * <span>(em branco para GRATUITO)</span></label>
       <input 
         id="price"
-        placeholder='Quais tecnologias usam'
+        placeholder='Valor cobrado por dia'
         value={price}
         onChange={event => setPrice(event.target.value)}
       />
